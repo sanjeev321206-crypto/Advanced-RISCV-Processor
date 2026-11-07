@@ -1,0 +1,9 @@
+VCD info: dumpfile waveforms/alu.vcd opened for output.
+ADD TEST PASSED
+SUB TEST PASSED
+AND TEST PASSED
+OR TEST PASSED
+XOR TEST PASSED
+SLT TEST PASSED
+ALU TESTING COMPLETED
+testbench/alu_tb.v:91: $finish called at 60 (1s)

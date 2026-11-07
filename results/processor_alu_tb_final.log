@@ -1,0 +1,19 @@
+VCD info: dumpfile waveforms/processor_alu.vcd opened for output.
+
+===== EXTENDED PROCESSOR RESULTS =====
+PASS: x1 = 10 (0x0000000a)
+PASS: x2 = 3 (0x00000003)
+PASS: x3 = 2 (0x00000002)
+PASS: x4 = 11 (0x0000000b)
+PASS: x5 = 9 (0x00000009)
+PASS: x6 = 80 (0x00000050)
+PASS: x7 = 1 (0x00000001)
+PASS: x8 = 4294967294 (0xfffffffe)
+PASS: x9 = 1 (0x00000001)
+PASS: x10 = 0 (0x00000000)
+PASS: x11 = 4294967280 (0xfffffff0)
+
+PASSED: 11
+FAILED: 0
+ALL EXTENDED PROCESSOR TESTS PASSED!
+testbench/processor_alu_tb.v:155: $finish called at 457000 (1ps)

@@ -1,0 +1,8 @@
+VCD info: dumpfile waveforms/data_cache.vcd opened for output.
+TEST 1 PASSED: Initial read miss
+TEST 2 PASSED: Cache refill and read
+TEST 3 PASSED: Same-line word read
+TEST 4 PASSED: Write-through update
+TEST 5 PASSED: Stored data read
+TEST 6 PASSED: Conflict miss
+testbench/data_cache_tb.v:108: $finish called at 28000 (1ps)

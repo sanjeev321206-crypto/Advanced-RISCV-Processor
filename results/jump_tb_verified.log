@@ -1,0 +1,10 @@
+VCD info: dumpfile waveforms/jump.vcd opened for output.
+
+===== JUMP TEST RESULTS =====
+PASS: x1 = 4
+PASS: x2 = 0
+PASS: x3 = 30
+PASSED: 3
+FAILED: 0
+ALL JUMP TESTS PASSED!
+testbench/jump_tb.v:108: $finish called at 257000 (1ps)

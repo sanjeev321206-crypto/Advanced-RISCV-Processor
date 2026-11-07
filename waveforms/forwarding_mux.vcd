@@ -1,0 +1,51 @@
+$date
+	Sat Nov  7 14:11:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module forwarding_mux_tb $end
+$var wire 32 ! forwarded_data [31:0] $end
+$var reg 32 " ex_mem_data [31:0] $end
+$var reg 32 # mem_wb_data [31:0] $end
+$var reg 32 $ original_data [31:0] $end
+$var reg 2 % select [1:0] $end
+$scope module dut $end
+$var wire 32 & ex_mem_data [31:0] $end
+$var wire 32 ' mem_wb_data [31:0] $end
+$var wire 32 ( original_data [31:0] $end
+$var wire 2 ) select [1:0] $end
+$var reg 32 * forwarded_data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1010 *
+b0 )
+b1010 (
+b11110 '
+b10100 &
+b0 %
+b1010 $
+b11110 #
+b10100 "
+b1010 !
+$end
+#10000
+b10100 !
+b10100 *
+b10 %
+b10 )
+#20000
+b11110 !
+b11110 *
+b1 %
+b1 )
+#30000

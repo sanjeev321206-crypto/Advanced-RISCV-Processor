@@ -1,0 +1,115 @@
+$date
+	Sat Nov  7 14:11:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fetch_stage_tb $end
+$var wire 32 ! pc_plus4 [31:0] $end
+$var wire 32 " pc [31:0] $end
+$var wire 32 # instruction [31:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % flush $end
+$var reg 1 & redirect $end
+$var reg 32 ' redirect_target [31:0] $end
+$var reg 1 ( reset $end
+$var reg 1 ) stall $end
+$scope module uut $end
+$var wire 1 $ clk $end
+$var wire 1 % flush $end
+$var wire 1 & redirect $end
+$var wire 32 * redirect_target [31:0] $end
+$var wire 1 ( reset $end
+$var wire 1 ) stall $end
+$var wire 32 + pc_plus4 [31:0] $end
+$var wire 32 , pc [31:0] $end
+$var wire 32 - next_pc_value [31:0] $end
+$var wire 32 . instruction [31:0] $end
+$var parameter 32 / IMEM_WORDS $end
+$scope module instruction_memory_unit $end
+$var wire 32 0 instruction [31:0] $end
+$var wire 32 1 address [31:0] $end
+$var parameter 32 2 WORDS $end
+$var integer 32 3 i [31:0] $end
+$upscope $end
+$scope module pc_unit $end
+$var wire 1 $ clk $end
+$var wire 1 4 enable $end
+$var wire 32 5 next_pc [31:0] $end
+$var wire 1 ( reset $end
+$var reg 32 6 pc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000000 2
+b100000000 /
+$end
+#0
+$dumpvars
+b0 6
+b100 5
+14
+b100000000 3
+b0 1
+b10011 0
+b10011 .
+b100 -
+b0 ,
+b100 +
+b0 *
+0)
+1(
+b0 '
+0&
+0%
+0$
+b10011 #
+b0 "
+b100 !
+$end
+#5
+1$
+#10
+0$
+#12
+0(
+#15
+b1000 -
+b1000 5
+b1000 !
+b1000 +
+b100 "
+b100 ,
+b100 1
+b100 6
+1$
+#20
+04
+1)
+0$
+#25
+1$
+#30
+b1000000 -
+b1000000 5
+b1000000 '
+b1000000 *
+1&
+14
+0)
+0$
+#35
+b1000100 !
+b1000100 +
+b1000000 "
+b1000000 ,
+b1000000 1
+b1000000 6
+1$
+#36

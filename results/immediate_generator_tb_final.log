@@ -1,0 +1,7 @@
+I-TYPE PASSED
+S-TYPE PASSED
+B-TYPE PASSED
+U-TYPE PASSED
+J-TYPE PASSED
+IMMEDIATE GENERATOR TESTING COMPLETED
+testbench/immediate_generator_tb.v:61: $finish called at 50 (1s)

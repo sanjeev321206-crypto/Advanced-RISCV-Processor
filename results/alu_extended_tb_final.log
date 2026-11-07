@@ -1,0 +1,17 @@
+VCD info: dumpfile waveforms/alu_extended.vcd opened for output.
+PASS: ALU control=0010 result=000000f0
+PASS: ALU control=0011 result=0000f0f0
+PASS: ALU control=0100 result=00005555
+PASS: ALU control=0101 result=0000000c
+PASS: ALU control=0110 result=00000008
+PASS: ALU control=0111 result=fffffffc
+PASS: ALU control=1000 result=00000001
+PASS: ALU control=1000 result=00000001
+PASS: ALU control=1001 result=00000000
+PASS: ALU control=1001 result=00000001
+
+===== EXTENDED ALU RESULTS =====
+PASSED: 10
+FAILED: 0
+ALL EXTENDED ALU TESTS PASSED!
+testbench/alu_extended_tb.v:67: $finish called at 100000 (1ps)

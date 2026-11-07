@@ -1,0 +1,7 @@
+VCD info: dumpfile waveforms/fetch_stage.vcd opened for output.
+PC RESET TEST PASSED
+PC INCREMENT TEST PASSED
+PC STALL TEST PASSED
+PC REDIRECT TEST PASSED
+FETCH STAGE TESTING COMPLETED
+testbench/fetch_stage_tb.v:86: $finish called at 36 (1s)

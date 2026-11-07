@@ -1,0 +1,105 @@
+$date
+	Sat Nov  7 14:11:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module branch_predictor_tb $end
+$var wire 1 ! predicted_taken $end
+$var reg 1 " actual_taken $end
+$var reg 1 # clk $end
+$var reg 32 $ predict_pc [31:0] $end
+$var reg 1 % reset $end
+$var reg 1 & update_en $end
+$var reg 32 ' update_pc [31:0] $end
+$scope module dut $end
+$var wire 1 " actual_taken $end
+$var wire 1 # clk $end
+$var wire 32 ( predict_pc [31:0] $end
+$var wire 1 % reset $end
+$var wire 1 & update_en $end
+$var wire 32 ) update_pc [31:0] $end
+$var wire 4 * update_index [3:0] $end
+$var wire 1 ! predicted_taken $end
+$var wire 4 + predict_index [3:0] $end
+$var parameter 36 , ENTRIES $end
+$var parameter 32 - INDEX_BITS $end
+$var integer 32 . i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 -
+b10000 ,
+$end
+#0
+$dumpvars
+b10000 .
+b0 +
+b0 *
+b1000000 )
+b1000000 (
+b1000000 '
+0&
+1%
+b1000000 $
+0#
+0"
+0!
+$end
+#5000
+b10000 .
+1#
+#10000
+0#
+#12000
+0%
+#15000
+1#
+#20000
+1"
+1&
+0#
+#25000
+1!
+1#
+#30000
+0&
+0#
+#35000
+1#
+#40000
+1&
+0#
+#45000
+1#
+#50000
+0&
+0#
+#55000
+1#
+#60000
+0"
+1&
+0#
+#65000
+1#
+#70000
+0&
+0#
+#75000
+1#
+#80000
+1&
+0#
+#85000
+0!
+1#
+#90000
+0&
+0#
+#91000

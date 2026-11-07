@@ -1,0 +1,279 @@
+
+============================================================
+MODULE: fetch_stage
+============================================================
+MODULE DECLARATION NOT FOUND
+
+============================================================
+MODULE: if_id_register
+============================================================
+module if_id_register (
+    input wire clk,
+    input wire reset,
+    input wire stall,
+    input wire flush,
+    input wire [31:0] pc_in,
+    input wire [31:0] pc_plus4_in,
+    input wire [31:0] instruction_in,
+    output reg [31:0] pc_out,
+    output reg [31:0] pc_plus4_out,
+    output reg [31:0] instruction_out
+);
+
+============================================================
+MODULE: decode_stage
+============================================================
+module decode_stage (
+    input wire clk,
+    input wire reset,
+    input wire [31:0] pc,
+    input wire [31:0] pc_plus4,
+    input wire [31:0] instruction,
+
+    input wire wb_reg_write,
+    input wire [4:0] wb_rd,
+    input wire [31:0] wb_data,
+
+    output wire [31:0] reg_data1,
+    output wire [31:0] reg_data2,
+    output wire [31:0] immediate,
+
+    output wire [4:0] rs1,
+    output wire [4:0] rs2,
+    output wire [4:0] rd,
+    output wire [2:0] funct3,
+
+    output wire reg_write,
+    output wire mem_read,
+    output wire mem_write,
+    output wire mem_to_reg,
+    output wire alu_src,
+    output wire branch,
+    output wire jump,
+    output wire jalr,
+    output wire lui,
+    output wire auipc,
+    output wire [3:0] alu_control
+);
+
+============================================================
+MODULE: id_ex_register
+============================================================
+module id_ex_register (
+    input wire clk,
+    input wire reset,
+    input wire flush,
+
+    input wire [31:0] pc_in,
+    input wire [31:0] pc_plus4_in,
+    input wire [31:0] reg_data1_in,
+    input wire [31:0] reg_data2_in,
+    input wire [31:0] immediate_in,
+
+    input wire [4:0] rs1_in,
+    input wire [4:0] rs2_in,
+    input wire [4:0] rd_in,
+
+    input wire [3:0] alu_control_in,
+
+    input wire reg_write_in,
+    input wire mem_read_in,
+    input wire mem_write_in,
+    input wire mem_to_reg_in,
+    input wire alu_src_in,
+    input wire branch_in,
+    input wire jump_in,
+    input wire jalr_in,
+    input wire lui_in,
+    input wire auipc_in,
+
+    output reg [31:0] pc_out,
+    output reg [31:0] pc_plus4_out,
+    output reg [31:0] reg_data1_out,
+    output reg [31:0] reg_data2_out,
+    output reg [31:0] immediate_out,
+
+    output reg [4:0] rs1_out,
+    output reg [4:0] rs2_out,
+    output reg [4:0] rd_out,
+
+    output reg [3:0] alu_control_out,
+
+    output reg reg_write_out,
+    output reg mem_read_out,
+    output reg mem_write_out,
+    output reg mem_to_reg_out,
+    output reg alu_src_out,
+    output reg branch_out,
+    output reg jump_out,
+    output reg jalr_out,
+    output reg lui_out,
+    output reg auipc_out
+);
+
+============================================================
+MODULE: execute_stage
+============================================================
+module execute_stage (
+    input wire [31:0] pc,
+    input wire [31:0] pc_plus4,
+    input wire [31:0] reg_data1,
+    input wire [31:0] reg_data2,
+    input wire [31:0] immediate,
+
+    input wire [4:0] rs1,
+    input wire [4:0] rs2,
+    input wire [4:0] rd,
+
+    input wire [3:0] alu_control,
+    input wire alu_src,
+    input wire branch,
+    input wire jump,
+    input wire jalr,
+    input wire lui,
+    input wire auipc,
+    input wire [2:0] funct3,
+
+    output wire [31:0] alu_result,
+    output wire [31:0] store_data,
+    output wire [31:0] branch_target,
+    output wire [31:0] jump_target,
+    output wire branch_taken,
+    output wire [31:0] writeback_data
+);
+
+============================================================
+MODULE: ex_mem_register
+============================================================
+module ex_mem_register (
+    input wire clk,
+    input wire reset,
+
+    input wire [31:0] pc_plus4_in,
+    input wire [31:0] alu_result_in,
+    input wire [31:0] write_data_in,
+
+    input wire [4:0] rd_in,
+
+    input wire reg_write_in,
+    input wire mem_read_in,
+    input wire mem_write_in,
+    input wire mem_to_reg_in,
+
+    output reg [31:0] pc_plus4_out,
+    output reg [31:0] alu_result_out,
+    output reg [31:0] write_data_out,
+
+    output reg [4:0] rd_out,
+
+    output reg reg_write_out,
+    output reg mem_read_out,
+    output reg mem_write_out,
+    output reg mem_to_reg_out
+);
+
+============================================================
+MODULE: memory_stage
+============================================================
+module memory_stage (
+    input wire clk,
+    input wire mem_read,
+    input wire mem_write,
+    input wire [31:0] address,
+    input wire [31:0] write_data,
+    input wire [2:0] funct3,
+    output wire [31:0] read_data
+);
+
+============================================================
+MODULE: mem_wb_register
+============================================================
+module mem_wb_register (
+    input wire clk,
+    input wire reset,
+
+    input wire [31:0] alu_result_in,
+    input wire [31:0] memory_data_in,
+    input wire [31:0] pc_plus4_in,
+
+    input wire [4:0] rd_in,
+
+    input wire reg_write_in,
+    input wire mem_to_reg_in,
+
+    output reg [31:0] alu_result_out,
+    output reg [31:0] memory_data_out,
+    output reg [31:0] pc_plus4_out,
+
+    output reg [4:0] rd_out,
+
+    output reg reg_write_out,
+    output reg mem_to_reg_out
+);
+
+============================================================
+MODULE: writeback_mux
+============================================================
+module writeback_mux (
+    input wire [31:0] alu_result,
+    input wire [31:0] memory_data,
+    input wire [31:0] pc_plus4,
+    input wire [1:0] result_select,
+    output reg [31:0] writeback_data
+);
+
+============================================================
+MODULE: register_writeback
+============================================================
+module register_writeback (
+    input wire reg_write,
+    input wire [4:0] rd,
+    input wire [31:0] writeback_data,
+
+    output wire write_enable,
+    output wire [4:0] destination_register,
+    output wire [31:0] register_data
+);
+
+============================================================
+MODULE: hazard_detection_unit
+============================================================
+module hazard_detection_unit (
+    input wire [4:0] if_id_rs1,
+    input wire [4:0] if_id_rs2,
+    input wire [4:0] id_ex_rd,
+    input wire id_ex_mem_read,
+
+    output reg pc_write,
+    output reg if_id_write,
+    output reg control_stall
+);
+
+============================================================
+MODULE: forwarding_unit
+============================================================
+module forwarding_unit (
+    input wire [4:0] id_ex_rs1,
+    input wire [4:0] id_ex_rs2,
+
+    input wire [4:0] ex_mem_rd,
+    input wire ex_mem_reg_write,
+
+    input wire [4:0] mem_wb_rd,
+    input wire mem_wb_reg_write,
+
+    output reg [1:0] forward_a,
+    output reg [1:0] forward_b
+);
+
+============================================================
+MODULE: forwarding_mux
+============================================================
+module forwarding_mux (
+    input wire [31:0] original_data,
+    input wire [31:0] ex_mem_data,
+    input wire [31:0] mem_wb_data,
+    input wire [1:0] select,
+
+    output reg [31:0] forwarded_data
+);

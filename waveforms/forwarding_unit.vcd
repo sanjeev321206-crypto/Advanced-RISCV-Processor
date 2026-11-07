@@ -1,0 +1,85 @@
+$date
+	Sat Nov  7 14:11:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module forwarding_unit_tb $end
+$var wire 2 ! forward_b [1:0] $end
+$var wire 2 " forward_a [1:0] $end
+$var reg 5 # ex_mem_rd [4:0] $end
+$var reg 1 $ ex_mem_reg_write $end
+$var reg 5 % id_ex_rs1 [4:0] $end
+$var reg 5 & id_ex_rs2 [4:0] $end
+$var reg 5 ' mem_wb_rd [4:0] $end
+$var reg 1 ( mem_wb_reg_write $end
+$scope module dut $end
+$var wire 5 ) ex_mem_rd [4:0] $end
+$var wire 1 $ ex_mem_reg_write $end
+$var wire 5 * id_ex_rs1 [4:0] $end
+$var wire 5 + id_ex_rs2 [4:0] $end
+$var wire 5 , mem_wb_rd [4:0] $end
+$var wire 1 ( mem_wb_reg_write $end
+$var reg 2 - forward_a [1:0] $end
+$var reg 2 . forward_b [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 .
+b10 -
+b0 ,
+b10 +
+b1 *
+b1 )
+0(
+b0 '
+b10 &
+b1 %
+1$
+b1 #
+b10 "
+b0 !
+$end
+#10000
+b1 "
+b1 -
+1(
+0$
+b11 '
+b11 ,
+b0 #
+b0 )
+b100 &
+b100 +
+b11 %
+b11 *
+#20000
+b10 "
+b10 -
+1$
+b101 '
+b101 ,
+b101 #
+b101 )
+b101 %
+b101 *
+#30000
+b0 "
+b0 -
+b10 '
+b10 ,
+b1 #
+b1 )
+b111 &
+b111 +
+b110 %
+b110 *
+#40000

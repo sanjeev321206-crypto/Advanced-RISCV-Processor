@@ -1,0 +1,7 @@
+VCD info: dumpfile waveforms/instruction_cache.vcd opened for output.
+TEST 1 PASSED: Initial cache miss
+TEST 2 PASSED: Cache hit after fill
+TEST 3 PASSED: Same cache line hit
+TEST 4 PASSED: Conflict miss detected
+TEST 5 PASSED: Conflict line filled
+testbench/instruction_cache_tb.v:80: $finish called at 26000 (1ps)

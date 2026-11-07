@@ -1,0 +1,73 @@
+$date
+	Sat Nov  7 14:11:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module instruction_cache_tb $end
+$var wire 32 ! instruction [31:0] $end
+$var wire 1 " hit $end
+$var reg 32 # address [31:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$scope module dut $end
+$var wire 32 & address [31:0] $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var wire 2 ' word_offset [1:0] $end
+$var wire 4 ( index [3:0] $end
+$var wire 24 ) address_tag [23:0] $end
+$var parameter 32 * CACHE_LINES $end
+$var reg 1 " hit $end
+$var reg 32 + instruction [31:0] $end
+$var integer 32 , i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 *
+$end
+#0
+$dumpvars
+b10000 ,
+b10011 +
+b0 )
+b0 (
+b0 '
+b0 &
+1%
+0$
+b0 #
+0"
+b10011 !
+$end
+#5000
+b10000 ,
+1$
+#10000
+0$
+#12000
+0%
+#15000
+1"
+1$
+#16000
+b1 '
+b100 #
+b100 &
+#17000
+0"
+b1 )
+b0 '
+b100000000 #
+b100000000 &
+#20000
+0$
+#25000
+1"
+1$
+#26000

@@ -1,0 +1,5 @@
+PIPELINE TRANSFER PASSED
+STALL TEST PASSED
+FLUSH TEST PASSED
+IF/ID TESTING COMPLETED
+testbench/if_id_register_tb.v:86: $finish called at 46 (1s)

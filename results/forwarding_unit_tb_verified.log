@@ -1,0 +1,6 @@
+VCD info: dumpfile waveforms/forwarding_unit.vcd opened for output.
+TEST 1 PASSED: EX/MEM forwarding
+TEST 2 PASSED: MEM/WB forwarding
+TEST 3 PASSED: EX/MEM priority
+TEST 4 PASSED: No forwarding required
+testbench/forwarding_unit_tb.v:81: $finish called at 40000 (1ps)

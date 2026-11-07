@@ -1,0 +1,21 @@
+Passed: 17
+Failed: 0
+Review: 0
+
+alu_extended_tb: PASS
+alu_tb: PASS
+branch_predictor_tb: PASS
+control_unit_tb: PASS
+data_cache_tb: PASS
+fetch_stage_tb: PASS
+forwarding_mux_tb: PASS
+forwarding_unit_tb: PASS
+hazard_detection_tb: PASS
+if_id_register_tb: PASS
+immediate_generator_tb: PASS
+instruction_cache_tb: PASS
+jalr_tb: PASS
+jump_tb: PASS
+processor_alu_tb: PASS
+processor_tb: PASS
+register_file_tb: PASS

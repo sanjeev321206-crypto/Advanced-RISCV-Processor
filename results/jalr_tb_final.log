@@ -1,0 +1,13 @@
+VCD info: dumpfile waveforms/jalr.vcd opened for output.
+
+===== JALR TEST RESULTS =====
+PASS: x1 = 16
+PASS: x2 = 8
+PASS: x3 = 42
+PASS: x4 = 0
+PASS: x5 = 0
+
+PASSED: 5
+FAILED: 0
+ALL JALR TESTS PASSED!
+testbench/jalr_tb.v:107: $finish called at 307000 (1ps)

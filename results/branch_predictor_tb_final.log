@@ -1,0 +1,7 @@
+VCD info: dumpfile waveforms/branch_predictor.vcd opened for output.
+TEST 1 PASSED: Initial not-taken prediction
+TEST 2 PASSED: Predictor learns taken
+TEST 3 PASSED: Strongly taken prediction
+TEST 4 PASSED: Predictor retains taken prediction
+TEST 5 PASSED: Predictor learns not taken
+testbench/branch_predictor_tb.v:106: $finish called at 91000 (1ps)

@@ -1,0 +1,5 @@
+VCD info: dumpfile waveforms/forwarding_mux.vcd opened for output.
+TEST 1 PASSED: Original data selected
+TEST 2 PASSED: EX/MEM data selected
+TEST 3 PASSED: MEM/WB data selected
+testbench/forwarding_mux_tb.v:51: $finish called at 30000 (1ps)

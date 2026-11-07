@@ -1,0 +1,4 @@
+VCD info: dumpfile waveforms/register_file.vcd opened for output.
+REGISTER WRITE/READ PASSED
+ZERO REGISTER TEST PASSED
+testbench/register_file_tb.v:75: $finish called at 32 (1s)

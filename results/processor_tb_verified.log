@@ -1,0 +1,28 @@
+VCD info: dumpfile waveforms/processor.vcd opened for output.
+
+===== FORWARDING TRACE =====
+EX: rs1=3 rs2=1 rd=4
+EX/MEM: rd=3 reg_write=1 mem_to_reg=0 alu=12
+MEM/WB: rd=2 reg_write=1 data=7
+SELECT: A=10 B=00
+OPERANDS: A=12 B=5
+============================
+
+
+========== PROCESSOR RESULTS ==========
+PASS: x1 = 5
+PASS: x2 = 7
+PASS: x3 = 12
+PASS: x4 = 7
+PASS: x5 = 12
+PASS: x6 = 19
+PASS: x7 = 19
+PASS: x8 = 42
+PASS: Memory[0] = 12
+
+======================================
+PASSED: 9
+FAILED: 0
+======================================
+ALL PROCESSOR TESTS PASSED!
+testbench/processor_tb.v:218: $finish called at 407000 (1ps)

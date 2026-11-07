@@ -1,0 +1,101 @@
+$date
+	Sat Nov  7 14:11:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module data_cache_tb $end
+$var wire 32 ! read_data [31:0] $end
+$var wire 1 " hit $end
+$var reg 32 # address [31:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % mem_read $end
+$var reg 1 & mem_write $end
+$var reg 1 ' reset $end
+$var reg 32 ( write_data [31:0] $end
+$scope module dut $end
+$var wire 32 ) address [31:0] $end
+$var wire 1 $ clk $end
+$var wire 1 " hit $end
+$var wire 1 % mem_read $end
+$var wire 1 & mem_write $end
+$var wire 1 ' reset $end
+$var wire 32 * write_data [31:0] $end
+$var wire 2 + word_offset [1:0] $end
+$var wire 4 , index [3:0] $end
+$var wire 24 - address_tag [23:0] $end
+$var parameter 32 . CACHE_LINES $end
+$var reg 32 / read_data [31:0] $end
+$var integer 32 0 i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 .
+$end
+#0
+$dumpvars
+b10000 0
+b0 /
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+1'
+0&
+0%
+0$
+b0 #
+0"
+b0 !
+$end
+#5000
+b10000 0
+1$
+#10000
+0$
+#12000
+1%
+0'
+#15000
+b1100100 !
+b1100100 /
+1"
+1$
+#16000
+b1100101 !
+b1100101 /
+b1 +
+b100 #
+b100 )
+#17000
+b0 !
+b0 /
+b1111100111 (
+b1111100111 *
+1&
+0%
+#20000
+0$
+#25000
+1$
+#26000
+b1111100111 !
+b1111100111 /
+1%
+0&
+#27000
+0"
+b0 !
+b0 /
+b1 -
+b0 +
+b100000000 #
+b100000000 )
+#28000
